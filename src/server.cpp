@@ -5,6 +5,7 @@ server::server()
     server::PORT = 8888;
     server::connection_count = 0;
     server::data = new thread_data[500];
+    server::logs.set_loglevel(server::logs.INFO);
 }
 
 server::~server()
@@ -16,14 +17,15 @@ int server::init()
 {
     if((server::sock = socket(AF_INET, SOCK_STREAM, 0)) < 0)
     {
-        perror("Socket");
+        logs.error("Socket");
         return -1;
-        //LOG
     }
 
     server::srv.sin_family = AF_INET;
     server::srv.sin_addr.s_addr = INADDR_ANY;
     server::srv.sin_port = htons(server::PORT);
+
+    logs.info("Server initiliazed succesfully");
 }
 
 int server::start()
@@ -32,17 +34,19 @@ int server::start()
 
     if(bind(server::sock, (struct sockaddr*)&(server::srv), sizeof(server::srv)))
     {
-        perror("Bind");
+        logs.error("Bind");
         return -1;
-        //LOG
     }
+
+    logs.info("Server bind succesfully");
 
     if(listen(server::sock, 50) < 0)
     {
-        perror("Listen");
-        return -2;
-        //LOG        
+        logs.error("Listen");
+        return -2;     
     }
+
+    logs.info("listening...");
 
     int size = sizeof(struct sockaddr_in);
     while((new_sock = accept(server::sock, (struct sockaddr*)&(server::client), (socklen_t*)&size)))

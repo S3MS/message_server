@@ -6,21 +6,17 @@
 
 #IncludeRegexTransform: 
 
-/home/s3ms/Desktop/My Projects/message_server-master/src/server.cpp
-server.h
-/home/s3ms/Desktop/My Projects/message_server-master/src/server.h
+/home/s3ms/Desktop/My Projects/message_server-master/src/log.cpp
+log.h
+/home/s3ms/Desktop/My Projects/message_server-master/src/log.h
 
-include/server.h
+include/log.h
 iostream
 -
-thread
+string.h
 -
-sys/socket.h
+time.h
 -
-arpa/inet.h
--
-stdio.h
--
-unistd.h
+errno.h
 -
 

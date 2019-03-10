@@ -4,6 +4,9 @@
 #include <arpa/inet.h>
 #include <stdio.h>
 #include <unistd.h>
+#include <errno.h>
+
+#include "log.h"
 
 #define MAX_CONNECTION_SIZE 5
 
@@ -20,13 +23,15 @@ class server
 private:
     int sock;
     int PORT;
-    static int connection_count;
+    int connection_count;
     
     struct sockaddr_in srv;
     struct sockaddr_in client;
 
     thread_data* data;
     pthread_t threads[MAX_CONNECTION_SIZE];
+
+    log logs;
 
     static void *connection_handler(void*);
 
