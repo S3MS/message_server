@@ -12,3 +12,4 @@ include_directories(${include_dir})
 
 add_executable(app ${source_files})
 
+target_link_libraries(app pthread)

@@ -3,3 +3,7 @@
 
 CMakeFiles/app.dir/src/main.cpp.o
  /home/s3ms/Desktop/My Projects/message_server-master/src/main.cpp
+ include/server.h
+CMakeFiles/app.dir/src/server.cpp.o
+ /home/s3ms/Desktop/My Projects/message_server-master/src/server.cpp
+ include/server.h

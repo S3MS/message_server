@@ -5,6 +5,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/s3ms/Desktop/My Projects/message_server-master/src/main.cpp" "/home/s3ms/Desktop/My Projects/message_server-master/CMakeFiles/app.dir/src/main.cpp.o"
+  "/home/s3ms/Desktop/My Projects/message_server-master/src/server.cpp" "/home/s3ms/Desktop/My Projects/message_server-master/CMakeFiles/app.dir/src/server.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

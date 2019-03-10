@@ -1,1 +1,1 @@
-/usr/bin/c++   -std=c++11   CMakeFiles/app.dir/src/main.cpp.o  -o app 
+/usr/bin/c++   -std=c++11   CMakeFiles/app.dir/src/main.cpp.o CMakeFiles/app.dir/src/server.cpp.o  -o app -lpthread 
