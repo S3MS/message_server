@@ -1,46 +1,46 @@
 #include "log.h"
 
-log::log()
+Log::Log()
 {
-    log::log_level = log::INFO;
+    Log::log_level = Log::INFO;
 }
 
-void log::set_loglevel(int level)
+void Log::set_loglevel(int level)
 {
-    log::log_level = level;
+    Log::log_level = level;
 }
 
-void log::info(const std::string& message)
+void Log::info(const std::string& message)
 {
-    if(log::log_level >= log::INFO)
+    if(Log::log_level >= Log::INFO)
     {
         std::cout<<"\033[1;32m";
-        std::cout<<"[INFO] "<<message<<" at "<<log::get_current_time()<<std::endl;
+        std::cout<<"[INFO] "<<message<<" at "<<Log::get_current_time()<<std::endl;
         std::cout<<"\033[0m";
     }
 }
 
-void log::warn(const std::string& message)
+void Log::warn(const std::string& message)
 {
-    if(log::log_level >= log::WARNING)
+    if(Log::log_level >= Log::WARNING)
     {
         std::cout<<"\033[1;33m";
-        std::cout<<"[WARNING] "<<message<<" at "<<log::get_current_time()<<std::endl;
+        std::cout<<"[WARNING] "<<message<<" at "<<Log::get_current_time()<<std::endl;
         std::cout<<"\033[0m";
     }
 }
 
-void log::error(const std::string& message)
+void Log::error(const std::string& message)
 {
-    if(log::log_level >= log::ERROR)
+    if(Log::log_level >= Log::ERROR)
     {
         std::cout<<"\033[1;31m";
-        std::cout<<"[ERROR] "<<message<<": "<<strerror(errno)<<" at "<<log::get_current_time()<<std::endl;
+        std::cout<<"[ERROR] "<<message<<": "<<strerror(errno)<<" at "<<Log::get_current_time()<<std::endl;
         std::cout<<"\033[0m";
     }
 }
 
-std::string log::get_current_time()
+std::string Log::get_current_time()
 {
 
     char __date[15];
@@ -61,7 +61,7 @@ std::string log::get_current_time()
 
 }
 
-log::~log()
+Log::~Log()
 {
 
 }

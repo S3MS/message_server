@@ -3,7 +3,7 @@
 #include <time.h>
 #include <errno.h>
 
-class log
+class Log
 {
 private:
     int log_level;
@@ -15,8 +15,8 @@ public:
     const int WARNING = 1;
     const int ERROR = 0;
 
-    log();
-    ~log();
+    Log();
+    ~Log();
 
     void set_loglevel(int);
 

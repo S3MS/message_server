@@ -10,7 +10,7 @@ server::server()
 
 server::~server()
 {
-
+    delete [] server::data;
 }
 
 int server::init()
@@ -53,7 +53,7 @@ int server::start()
     {
         if(++(server::connection_count) >= MAX_CONNECTION_SIZE)
         {
-            connection_count--;
+            server::connection_count--;
             continue;
         }
         
@@ -72,6 +72,8 @@ int server::start()
 void* server::connection_handler(void *__data)
 {
     char buffer[500];
+    json j;
+    j["pi"] = 3.14;
 
     thread_data data = *(thread_data*)__data;
 

@@ -7,12 +7,14 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/s3ms/Desktop/My Projects/message_server-master/src/log.cpp" "/home/s3ms/Desktop/My Projects/message_server-master/CMakeFiles/app.dir/src/log.cpp.o"
   "/home/s3ms/Desktop/My Projects/message_server-master/src/main.cpp" "/home/s3ms/Desktop/My Projects/message_server-master/CMakeFiles/app.dir/src/main.cpp.o"
   "/home/s3ms/Desktop/My Projects/message_server-master/src/server.cpp" "/home/s3ms/Desktop/My Projects/message_server-master/CMakeFiles/app.dir/src/server.cpp.o"
+  "/home/s3ms/Desktop/My Projects/message_server-master/src/user.cpp" "/home/s3ms/Desktop/My Projects/message_server-master/CMakeFiles/app.dir/src/user.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "include"
+  "nlohmann_json/include"
   )
 
 # Targets to which this target links.

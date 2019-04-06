@@ -6,5 +6,5 @@ CXX_FLAGS =  -std=c++11
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I"/home/s3ms/Desktop/My Projects/message_server-master/include" 
+CXX_INCLUDES = -I"/home/s3ms/Desktop/My Projects/message_server-master/include" -I"/home/s3ms/Desktop/My Projects/message_server-master/nlohmann_json/include" 
 

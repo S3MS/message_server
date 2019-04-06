@@ -6,7 +6,10 @@
 #include <unistd.h>
 #include <errno.h>
 
+#include "nlohmann/json.hpp"
 #include "log.h"
+
+using json = nlohmann::json;
 
 #define MAX_CONNECTION_SIZE 5
 
@@ -31,7 +34,7 @@ private:
     thread_data* data;
     pthread_t threads[MAX_CONNECTION_SIZE];
 
-    log logs;
+    Log logs;
 
     static void *connection_handler(void*);
 
